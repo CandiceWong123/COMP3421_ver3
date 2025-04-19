@@ -4,20 +4,12 @@ const axios = require('axios');
 const csv = require('csv-parser'); 
 const { Readable } = require('stream');
 const path = require('path'); // Add this line
-
-
-const cool = require('cool-ascii-faces');
-
-
-
 const app = express();
 
-app.use(express.static(path.join(__dirname, '../public')));
-app.get('/cool', (req, res) => {
-    console.log(`Rendering a cool ascii face for route '/cool'`)
-    res.send(cool())
-  })
-
+app.use(express.static(path.join(__dirname, 'public'))); // Correct path
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html')); // Correct path
+});
 
 
 const PORT = process.env.PORT || 3000
