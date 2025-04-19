@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App Testing</title>
+</head>
+<body>
+    <h1>Weather Data</h1>
+
+    <h2>Weather Information API</h2>
+    <button onclick="getWeather('forecast')">Get 9-day Weather Forecast</button>
+    <button onclick="getWeather('current')">Get Current Weather Report</button>
+    <button onclick="getWeather('local')">Get Local Weather Forecast</button>
+    <button onclick="getWeather('warningInfo')">Get Weather Warning Information</button>
+    <button onclick="getWeather('warningSummary')">Get Weather Warning Summary</button>
+    <button onclick="getWeather('specialTips')">Get Special Weather Tips</button>
+
+    <h2>Open Data (Climate and Weather Information) API</h2>
+    <button onclick="getWeather('sunriseSunset')">Sunrise & Sunset Times</button>
+    <button onclick="getWeather('moonriseMoonset')">Moonrise & Moonset Times</button>
+    <button onclick="getWeather('visibility')">Latest Visibility</button>
+    <button onclick="getWeather('dailyMeanTemp')">Daily Mean Temperature</button>
+    <button onclick="getWeather('dailyMaxTemp')">Daily Max Temperature</button>
+    <button onclick="getWeather('dailyMinTemp')">Daily Min Temperature</button>
+    <button onclick="getWeather('radiationReport')">Weather & Radiation Report</button>
+
+    <h3>Rainfall Information API</h3>
+    <button onclick="getWeather('rainfallPastHour')">Rainfall in Past Hour</button>
+    
+    <h3>Regional Temperature Data API</h3>
+    <select id="stationSelector">
+        <!-- for testing, so I just add these few stations -->
+        <option value="HKO">Hong Kong Observatory</option>
+        <option value="KP">King's Park</option>
+        <option value="SHA">Sha Tin</option>
+        <option value="TUN">Tuen Mun</option>
+        <option value="TPO">Tai Po</option>
+    </select>
+    <button onclick="getStationData()">Get Station Data</button>
+
+    <h3>UV API</h3>
+    <button onclick="getUVIndexData()">Get UV Index Data</button>
+
+
+    <pre id="output"></pre>
+    <script src="script_test.js"></script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2BNMPSPWD"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-P2BNMPSPWD');
+    </script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+   })(window,document,'script','dataLayer','GTM-5QQGH6KJ');</script>
+   <!-- End Google Tag Manager -->
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMP3421-25-P3 Weather API Group Project</title>
+
+    <link id="pagestyle" rel="stylesheet" href="style_light.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5QQGH6KJ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <nav class="navbar">
+        <ul>
+            <div class="logo">
+                <li id="web_name">WEATHER</li>
+                <img id="web_icon" src = "image/observatory.png" alt = "Icon"  class="f_icon">
+            </div>
+
+            <div class="nav_links">
+                <li><a href="#current" data-i18n="current">Current weather</a></li>
+                <li><a href="#warnings" data-i18n="warnings">Weather warnings</a></li>
+                <li><a href="#region" data-i18n="region">Regional weather</a></li>
+                <li><a href="#forecast"  data-i18n="forecast">9-days forecast</a></li>
+            </div>
+
+            <div class="nav_buttons">
+                <li><button id = "lang_en" onclick="loadTranslations('en')">EN</button></li>
+                <li><button id = "lang_chi" onclick="loadTranslations('tc')">中</button></li>
+                <i id="switch_button" class="fa fa-sun-o" onclick="toggleTheme()"></i>
+            </div>
+            <li id = "date_display"><span data-i18n="last_update">Last update on</span> <span id="fetch_date">Date</span></li>
+        </ul>
+    </nav>
+
+    <br>
+    <br>
+    <br>
+
+    <div id="current">
+        <h2 data-i18n="current_weather">CURRENT WEATHER</h2>
+        <div class="c_preview"> 
+            <div >
+                <span id="c_city" data-i18n="c_city">Hong Kong</span>
+                <br>
+                <div class="c_hk">
+                    <img id="c_icon" class="f_icon" src = "" alt = "Current Weather Icon">
+                    <ul>
+                        <li id="c_temp" data-i18n="c_temp"></li>
+                        <li id="c_condition" data-i18n="c_condition"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="c_values">
+                <ul>
+                    <li><span data-i18n="c_max_temp">Max temp:</span> <span id="c_max_temp"></li>  
+                    <li><span data-i18n="c_min_temp">Min temp:</span> <span id="c_min_temp"></li>  
+                    <li><span data-i18n="c_humidity">Humidity:</span> <span id="c_humidity"></span></li>
+                    <li><span data-i18n="c_uv">UV:</span> <span id="c_uv"></li>            
+                    <li><span data-i18n="c_visibility">Visibility:</span> <span id="c_visibility"></li>
+                    <!-- <li>Rainfall: <span id="c_rainfall"></li>   -->
+
+                </ul>
+                <ul>
+                    <li><span data-i18n="c_rainfall">Rainfall: </span> <span id="c_rainfall"></li>  
+                    <li><span data-i18n="c_sunrise">Sunrise: </span> <span id="c_sunrise"></span></li>
+                    <li><span data-i18n="c_sunset">Sunset: </span> <span id="c_sunset"></span></li>
+                    <li><span data-i18n="c_moonrise">Moonrise: </span> <span id="c_moonrise"></span></li>
+                    <li><span data-i18n="c_moonset">Moonset: </span> <span id="c_moonset"></span></li>            
+                </ul>
+            </div>
+        </div>
+        <p id = "c_report">Report is loading.</p>
+    </div>
+
+    <div id="warnings">
+        <h2 data-i18n="warnings">WEATHER WARNINGS</h2>
+        <ul id="warning_list">
+        </ul>
+        <div >
+            <span id="warn_name"></span>
+            <p id="warn_statement"></p>
+        </div>
+
+    </div>
+
+    <div id="region">
+        <h2 data-i18n="region">REGIONAL WEATHER</h2>
+        <div>
+            <div class = "r_preview">
+                <span data-i18n="r_region" id="r_region">Sha Tin</span>
+                <span id="r_temp"></span>
+                <div class="r_values">
+                    <ul>
+                        <li><span data-i18n="r_min_temp">Min temp:</span> <span id="r_min_temp"></span></li>
+                        <li><span data-i18n="r_max_temp">Max temp:</span> <span id="r_max_temp"></span></li>
+                        <li><span data-i18n="r_humidity">Humidity:</span> <span id="r_humidity"></span></li>
+                    </ul>
+                    <ul>
+                        <li><span data-i18n="r_uv">UV:</span> <span id="r_uv"></span></li>
+                        <li><span data-i18n="r_visibility">Visibility:</span> <span id="r_visibility"></span></li>
+                        <li><span data-i18n="r_rainfall">Rainfall:</span> <span id="r_rainfall"></span></li>
+                    </ul>
+                </div>
+                <div class = "search_engine">
+                    <input id="search_input" type="text" class="search_input" placeholder="Search region">
+                    <button class="search_button" onclick="searchRegion()" data-i18n="search_button">Search</button>         
+                    <ul class="dropdown_list"></ul>
+                </div>
+            </div>
+            <img id="region_image" src = "image/region/shatin.jpg" alt = "shatin">
+
+        </div>
+    </div>
+
+    <div id="forecast">
+        <h2 data-i18n="forecast_9days">9-DAYS FORECAST</h2>
+        <div class = "forecast_preview">
+            <p id="forecast_report" data-i18n="forecast_report">Report is loading.</p>
+            <ul id ="forecast_list">
+            </ul>
+        </div>
+    </div>
+
+
+    <script src="script_weather.js"></script>
+
+</body>
+</html>

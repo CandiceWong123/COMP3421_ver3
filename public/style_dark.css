@@ -1,0 +1,420 @@
+.html,
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #000000;
+    color: rgb(215, 215, 215);
+    font-family: "Inter", sans-serif;
+}
+
+/* Style for naviagtion bar */
+.navbar {
+    min-width: 800px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #000000;
+    box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.1);
+    padding: 20px 0;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 5px 10px;
+    font-size: 18px;
+}
+
+.logo {
+    width: 3vw;
+    display: flex;
+}
+
+#web_name {
+    margin-left: 10px;
+    font-size: 30px;
+    font-weight: 700;
+    color: rgb(237, 237, 237);
+}
+
+#web_icon {
+    width: 30px;
+    height: 30px;
+}
+
+.navbar ul a {
+    text-decoration: none;
+    color: rgb(209, 209, 209);
+}
+
+.navbar ul a:hover {
+    color: #81c2ed;
+    transition: color 0.3s ease;
+}
+
+.nav_links {
+    margin-left: 100px;
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+    font-optical-sizing: auto;
+    font-style: medium;
+    font-weight: 600;
+}
+
+.nav_buttons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav_buttons:hover {
+    cursor: pointer;
+}
+
+#lang_en,
+#lang_chi {
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 3px;
+    border: none;
+
+}
+
+#lang_en:hover,
+#lang_chi:hover {
+    cursor: pointer;
+    background-color: #495b6d;
+    transition: background-color 0.3s ease;
+}
+
+#date_display {
+    margin-right: 10px;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+/* Style for body */
+body>div {
+    min-width: 600px;
+    background: rgba(37, 37, 37, 0.55);
+    padding: 10px 20px;
+    margin: 30px 15%;
+    scroll-margin-top: 90px;
+    border-radius: 20px;
+}
+
+body>div h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(59, 161, 229);
+    margin: 20px 0;
+    padding-left: 10px;
+
+}
+
+/* Style for division 1 - Current weather */
+.c_preview {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.c_values,
+.c_hk {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.c_values {
+    color: #5a99c3;
+}
+
+#warning_list {
+    opacity: 80%;
+}
+
+.c_preview>.c_values {
+    width: 350px;
+    margin-right: 30px;
+    font-weight: 380;
+    line-height: 2.5;
+
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#c_city {
+    font-size: 55px;
+    font-weight: 500;
+    padding-left: 20px;
+}
+
+#c_icon {
+    width: 125px;
+    margin: 0 15px;
+    padding-left: 10px;
+}
+
+#c_temp {
+    width: 120px;
+    font-size: 40px;
+    font-weight: 450;
+    margin-top: 20px;
+}
+
+#c_condition {
+    width: 200px;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 20px 0;
+}
+
+
+p {
+    padding: 0px 20px;
+    font-weight: 300;
+    color: #2c77ce;
+    line-height: 1.8;
+}
+
+/* Style for division 2 - Warning weather */
+#warning_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 20px;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+}
+
+#warnings div {
+    padding: 20px;
+}
+
+#warn_name {
+    font-size: 18px;
+    font-weight: 500;
+    color: #3e82d5;
+}
+
+#warnings p {
+    padding-top: 5px;
+    padding-left: 0px;
+}
+
+
+#warning_icon {
+    margin-left: 10px;
+    font-size: 30px;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+}
+
+#warn_icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 20px;
+}
+
+
+/* Style for division 3 - Regional weather */
+#region>div {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+
+.r_preview {
+    width: 50%;
+    margin-right: 20px;
+    align-items: center;
+    padding-left: 40px;
+}
+
+#r_region {
+    font-size: 32px;
+    font-weight: 480;
+    margin-right: 10px;
+    margin-bottom: 30px;
+}
+
+#r_temp {
+    font-size: 32px;
+    font-weight: 420;
+}
+
+.r_values {
+    color: #5494bf;
+    width: 300px;
+    margin: 10px 0;
+    font-weight: 380;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: flex-start;
+    line-height: 2.5;
+    margin-bottom: 20px;
+}
+
+#region_image {
+    width: 40%;
+    height: 230px;
+    object-fit: cover;
+    overflow: hidden;
+    opacity: 0.9;
+    border-radius: 20px;
+}
+
+.search_engine {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.search_input {
+    width: 170px;
+    padding: 10px 20px;
+    border: 1px solid #3d627b;
+    border-radius: 30px 0 0 30px;
+    outline: none;
+    font-size: 16px;
+    background-color: #26486f;
+    color: #e4e4e4;
+}
+
+.search_button {
+    padding: 11px 20px;
+    border: none;
+    background-color: #3b6ca7;
+    color: rgb(217, 217, 217);
+    border-radius: 0 30px 30px 0;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search_button:hover {
+    background-color: #1a79b9;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown_list {
+    position: absolute;
+    top: 100%;
+    width: 200px;
+    background: rgb(29, 29, 29);
+    border: 1px solid #1c385b;
+    border-radius: 0 0 8px 8px;
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 0;
+    margin-left: 20px;
+    list-style: none;
+}
+
+.dropdown_item {
+    padding: 8px 30px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.dropdown_item:hover {
+    background: #2361a8;
+}
+
+
+/* Style for division 4 - 9-days forecast */
+.forecast_preview {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#forecast_report {
+    width: 45%;
+    float: left;
+    margin-right: 30px;
+    top: 40px;
+}
+
+#forecast_list {
+    width: 45%;
+    background-color: #35445c;
+    border-radius: 10px;
+}
+
+#forecast_list li {
+    align-items: right;
+    justify-content: space-between;
+    border-bottom: 1px solid #07141c;
+    padding: 5px 20px;
+}
+
+.f_day {
+    width: 130px;
+}
+
+#forecast_list span {
+    font-size: 12px;
+}
+
+.forecast_preview ul li img {
+    width: 15px;
+    height: 15px;
+}
+
+#expand_button {
+    width: 10px;
+    height: 6px;
+    padding-top: 5px;
+}
+
+.forecast_summary:hover {
+    cursor: pointer;
+}
+
+.forecast_item {
+    position: relative;
+    padding: 10px;
+    border-bottom: 1px solid #e7e6e6;
+}
+
+.forecast_summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.forecast_details {
+    background-color: #34506f;
+    padding: 5px 0;
+    margin-top: 10px;
+    border-radius: 0 0 5px 5px;
+    font-size: 12px;
+    display: none;
+}
+
+.forecast_details p {
+    margin: 5px 0;
+    color: #d9d9d9;
+}
