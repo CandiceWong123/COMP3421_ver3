@@ -3,12 +3,12 @@ const cors = require('cors');
 const axios = require('axios');
 const csv = require('csv-parser'); 
 const { Readable } = require('stream');
-const path = require('path'); // Add this line
+const path = require('path'); 
 const app = express();
 
-app.use(express.static(path.join(__dirname, 'public'))); // Correct path
+app.use(express.static(path.join(__dirname, 'public'))); 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html')); // Correct path
+    res.sendFile(path.join(__dirname, 'public', 'index.html')); 
 });
 
 
