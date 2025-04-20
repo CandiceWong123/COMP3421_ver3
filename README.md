@@ -2,7 +2,7 @@
 1. download node.js
 2. cd weather-app
 3. npm install express cors axios csv-parser
-4. node backend/server.js
+4. node index.js
 5. open browser and navigate http://localhost:3000
 6. If testing with the weather warning part with sample data, please uncomment the line 422-450, 515-542 and re-run step 1-5.
 
