@@ -419,35 +419,35 @@ async function getWeatherWarning() {
     return getWeather('warningSummary').then(data => {
 
         // Sample data for testing
-        if (document.documentElement.lang == "en") {
-            data = {
-                // "WFROST": {"name": "Frost Warning", "code": "WFROST", "actionCode": "ISSUE", "issueTime": "2020-09-24T11:15:00+08:00"},
-                "WHOT": {"name": "Very Hot Weather Warning", "code": "WHOT", "actionCode": "ISSUE", "issueTime": "2020-09-24T07:00:00+08:00"},
-                // "WCOLD": {"name": "Cold Weather Warning", "code": "WCOLD", "actionCode": "ISSUE", "issueTime": "2020-09-24T11:15:00+08:00"},
-                // "WFNTSA": {"name": "Flooding Announcement in Northern New Territories", "code": "WFNTSA", "actionCode": "ISSUE", "issueTime": "2020-09-24T11:40:00+08:00"},
-                // "WMSGNL": {"name": "Strong Monsoon Signal", "code": "WMSGNL", "actionCode": "ISSUE", "issueTime": "2020-09-24T11:15:00+08:00"},
-                // "WL": {"name": "Landslip Warning", "code": "WL", "actionCode": "ISSUE", "issueTime": "2020-09-24T11:15:00+08:00"},
-                // "WRAIN": {"name": "Rainstorm Warning Signal", "code": "WRAINR", "type": "Red", "actionCode": "ISSUE", "issueTime": "2020-09-24T11:15:00+08:00"},
-                // "WTMW": {"name": "Tsunami Warning", "code": "WTMW", "actionCode": "ISSUE", "issueTime": "2020-09-24T11:15:00+08:00"},
-                // "WTS": {"name": "Thunderstorm Warning", "code": "WTS", "actionCode": "EXTEND", "issueTime": "2020-09-24T11:40:00+08:00", "expireTime": "2020-09-24T19:30:00+08:00"},
-                // "WTCSGNL": {"name": "Tropical Cyclone Warning Signal", "code": "TC3", "actionCode": "ISSUE", "type": "Strong Wind Signal No. 3", "issueTime": "2020-09-24T11:15:00+08:00"},
-                "WFIRE": {"name": "Fire Danger Warning", "code": "WFIRER", "type": "Red", "actionCode": "ISSUE", "issueTime": "2020-09-24T11:15:00+08:00"}
-            }
-        } else {
-            data = {
-                // "WFROST": {"name": "霜凍警告", "code": "WFROST", "actionCode": "ISSUE", "issueTime": "2020-09-24T11:15:00+08:00", "updateTime": "2020-09-24T11:15:00+08:00"},
-                "WHOT": {"name": "酷熱天氣警告", "code": "WHOT", "actionCode": "ISSUE", "issueTime": "2020-09-24T07:00:00+08:00", "updateTime": "2020-09-24T07:00:00+08:00"},
-                // "WCOLD": {"name": "寒冷天氣警告", "code": "WCOLD", "actionCode": "ISSUE", "issueTime": "2020-09-24T11:15:00+08:00", "updateTime": "2020-09-24T11:15:00+08:00"},
-                // "WFNTSA": {"name": "新界北部水浸特別報告", "code": "WFNTSA", "actionCode": "ISSUE", "issueTime": "2020-09-24T11:40:00+08:00", "updateTime": "2020-09-24T11:40:00+08:00"},
-                // "WMSGNL": {"name": "強烈季候風信號", "code": "WMSGNL", "actionCode": "ISSUE", "issueTime": "2020-09-24T11:15:00+08:00", "updateTime": "2020-09-24T11:15:00+08:00"},
-                // "WL": {"name": "山泥傾瀉警告", "code": "WL", "actionCode": "ISSUE", "issueTime": "2020-09-24T11:15:00+08:00", "updateTime": "2020-09-24T11:15:00+08:00"},
-                // "WRAIN": {"name": "暴雨警告信號", "code": "WRAINR", "type": "紅色", "actionCode": "ISSUE", "issueTime": "2020-09-24T11:15:00+08:00", "updateTime": "2020-09-24T11:15:00+08:00"},
-                // "WTMW": {"name": "海嘯警告", "code": "WTMW", "actionCode": "ISSUE", "issueTime": "2020-09-24T11:15:00+08:00", "updateTime": "2020-09-24T11:15:00+08:00"},
-                // "WTS": {"name": "雷暴警告", "code": "WTS", "actionCode": "EXTEND", "issueTime": "2020-09-24T11:40:00+08:00", "expireTime": "2020-09-24T19:30:00+08:00", "updateTime": "2020-09-24T05:00:00+08:00"},
-                // "WTCSGNL": {"name": "熱帶氣旋警告信號", "code": "TC3", "actionCode": "ISSUE", "type": "三號強風信號", "issueTime": "2020-09-24T11:15:00+08:00", "updateTime": "2020-09-24T11:15:00+08:00"},
-                "WFIRE": {"name": "火災危險警告", "code": "WFIRER", "type": "紅色", "actionCode": "ISSUE", "issueTime": "2020-09-24T11:15:00+08:00", "updateTime": "2020-09-24T11:15:00+08:00"}
-            }
-        }
+        // if (document.documentElement.lang == "en") {
+        //     data = {
+        //         // "WFROST": {"name": "Frost Warning", "code": "WFROST", "actionCode": "ISSUE", "issueTime": "2020-09-24T11:15:00+08:00"},
+        //         "WHOT": {"name": "Very Hot Weather Warning", "code": "WHOT", "actionCode": "ISSUE", "issueTime": "2020-09-24T07:00:00+08:00"},
+        //         // "WCOLD": {"name": "Cold Weather Warning", "code": "WCOLD", "actionCode": "ISSUE", "issueTime": "2020-09-24T11:15:00+08:00"},
+        //         // "WFNTSA": {"name": "Flooding Announcement in Northern New Territories", "code": "WFNTSA", "actionCode": "ISSUE", "issueTime": "2020-09-24T11:40:00+08:00"},
+        //         // "WMSGNL": {"name": "Strong Monsoon Signal", "code": "WMSGNL", "actionCode": "ISSUE", "issueTime": "2020-09-24T11:15:00+08:00"},
+        //         // "WL": {"name": "Landslip Warning", "code": "WL", "actionCode": "ISSUE", "issueTime": "2020-09-24T11:15:00+08:00"},
+        //         // "WRAIN": {"name": "Rainstorm Warning Signal", "code": "WRAINR", "type": "Red", "actionCode": "ISSUE", "issueTime": "2020-09-24T11:15:00+08:00"},
+        //         // "WTMW": {"name": "Tsunami Warning", "code": "WTMW", "actionCode": "ISSUE", "issueTime": "2020-09-24T11:15:00+08:00"},
+        //         // "WTS": {"name": "Thunderstorm Warning", "code": "WTS", "actionCode": "EXTEND", "issueTime": "2020-09-24T11:40:00+08:00", "expireTime": "2020-09-24T19:30:00+08:00"},
+        //         // "WTCSGNL": {"name": "Tropical Cyclone Warning Signal", "code": "TC3", "actionCode": "ISSUE", "type": "Strong Wind Signal No. 3", "issueTime": "2020-09-24T11:15:00+08:00"},
+        //         "WFIRE": {"name": "Fire Danger Warning", "code": "WFIRER", "type": "Red", "actionCode": "ISSUE", "issueTime": "2020-09-24T11:15:00+08:00"}
+        //     }
+        // } else {
+        //     data = {
+        //         // "WFROST": {"name": "霜凍警告", "code": "WFROST", "actionCode": "ISSUE", "issueTime": "2020-09-24T11:15:00+08:00", "updateTime": "2020-09-24T11:15:00+08:00"},
+        //         "WHOT": {"name": "酷熱天氣警告", "code": "WHOT", "actionCode": "ISSUE", "issueTime": "2020-09-24T07:00:00+08:00", "updateTime": "2020-09-24T07:00:00+08:00"},
+        //         // "WCOLD": {"name": "寒冷天氣警告", "code": "WCOLD", "actionCode": "ISSUE", "issueTime": "2020-09-24T11:15:00+08:00", "updateTime": "2020-09-24T11:15:00+08:00"},
+        //         // "WFNTSA": {"name": "新界北部水浸特別報告", "code": "WFNTSA", "actionCode": "ISSUE", "issueTime": "2020-09-24T11:40:00+08:00", "updateTime": "2020-09-24T11:40:00+08:00"},
+        //         // "WMSGNL": {"name": "強烈季候風信號", "code": "WMSGNL", "actionCode": "ISSUE", "issueTime": "2020-09-24T11:15:00+08:00", "updateTime": "2020-09-24T11:15:00+08:00"},
+        //         // "WL": {"name": "山泥傾瀉警告", "code": "WL", "actionCode": "ISSUE", "issueTime": "2020-09-24T11:15:00+08:00", "updateTime": "2020-09-24T11:15:00+08:00"},
+        //         // "WRAIN": {"name": "暴雨警告信號", "code": "WRAINR", "type": "紅色", "actionCode": "ISSUE", "issueTime": "2020-09-24T11:15:00+08:00", "updateTime": "2020-09-24T11:15:00+08:00"},
+        //         // "WTMW": {"name": "海嘯警告", "code": "WTMW", "actionCode": "ISSUE", "issueTime": "2020-09-24T11:15:00+08:00", "updateTime": "2020-09-24T11:15:00+08:00"},
+        //         // "WTS": {"name": "雷暴警告", "code": "WTS", "actionCode": "EXTEND", "issueTime": "2020-09-24T11:40:00+08:00", "expireTime": "2020-09-24T19:30:00+08:00", "updateTime": "2020-09-24T05:00:00+08:00"},
+        //         // "WTCSGNL": {"name": "熱帶氣旋警告信號", "code": "TC3", "actionCode": "ISSUE", "type": "三號強風信號", "issueTime": "2020-09-24T11:15:00+08:00", "updateTime": "2020-09-24T11:15:00+08:00"},
+        //         "WFIRE": {"name": "火災危險警告", "code": "WFIRER", "type": "紅色", "actionCode": "ISSUE", "issueTime": "2020-09-24T11:15:00+08:00", "updateTime": "2020-09-24T11:15:00+08:00"}
+        //     }
+        // }
 
         // If there is no any warning
         if (Object.keys(data).length === 0){ 
@@ -512,34 +512,34 @@ async function getWarningDetail(warncode, warnName) {
 
     return getWeather('warningInfo').then(data => {
         // Sample data for testing
-        if (document.documentElement.lang == "en") {
-            data = {
-                "details": [
-                    {"contents": ["Thunderstorm Warning issued at 11:40 a.m. on 24 Sep 2020 has been extended until 7:30 p.m. today.", "Thunderstorms are expected to occur over Hong Kong.", "Precautions:", "1. Stay indoors.", "2. Keep away from conductive objects, trees, or masts."], "warningStatementCode": "WTS", "updateTime": "2020-09-24T05:00:00+08:00"},
-                    {"contents": ["The Strong Monsoon Signal was issued at 11:15 a.m."], "warningStatementCode": "WMSGNL", "updateTime": "2020-09-24T11:15:00+08:00"},
-                    {"contents": ["Landslip Warning issued at 11:15 a.m."], "warningStatementCode": "WL", "updateTime": "2020-09-24T11:15:00+08:00"},
-                    {"contents": ["The Very Hot Weather Warning has been issued at 07:00.", "The Hong Kong Observatory forecasts hot weather with light winds today.", "Precautions:", "1. Drink plenty of water and avoid overexertion.", "2. If feeling unwell, rest in a cool place.", "3. Ensure adequate indoor ventilation.", "4. Wear loose clothing, hats, and UV-blocking sunglasses.", "5. Use sunscreen SPF 15 or above and reapply frequently.", "6. Check on the elderly or persons with chronic illnesses."], "warningStatementCode": "WHOT", "updateTime": "2020-09-24T07:00:00+08:00"},
-                    {"contents": ["The Cold Weather Warning has been issued at 11:15 a.m.", "Cold weather is expected in Hong Kong.", "Precautions:", "1. Wear warm clothing and ensure indoor ventilation.", "2. Wind chill may lead to hypothermia.", "3. Check on elderly or persons with chronic illnesses.", "4. Beware of icy conditions in Tai Mo Shan.", "5. Ensure heaters are safe and placed away from combustibles.", "6. Avoid lighting fires indoors.", "7. Ensure fresh air when using old gas water heaters."], "warningStatementCode": "WCOLD", "updateTime": "2020-09-24T11:15:00+08:00"}
-                ]
-            }
-        } else {
-            data = {
-                "details": [
-                    {"contents": ["雷暴警告", "天文台在 9 月 24 日上午 11 時 40 分發出之雷暴警告，有效時間延長至今日下午 7 時 30 分，預料香港有雷暴。", "雷暴發生時，請採取以下預防措施：", "1. 留在室內。在室外的人士應躲入建築物內。", "2. 切勿站立於高地或接近導電的物體、樹木或桅杆。"], "warningStatementCode": "WTS", "updateTime": "2020-09-24T05:00:00+08:00"},
-                    {"contents": ["強烈季候風信號在 11 時 15 分發出。"], "warningStatementCode": "WMSGNL", "updateTime": "2020-09-24T11:15:00+08:00"},
-                    {"contents": ["山泥傾瀉警告：\n\n 天文台在 11:15 發出山泥傾瀉警告。"], "warningStatementCode": "WL", "updateTime": "2020-09-24T11:15:00+08:00"},
-                    {"contents": ["香港天文台在 07 時 00 分發出酷熱天氣警告。", "天文台預料今日本港天氣酷熱，加上風勢輕微，市民應提高警惕，以防中暑。", "在戶外工作或活動的人士，應多喝水和不要過度勞累。於感覺不適時，應盡快到陰涼的地方休息。"], "warningStatementCode": "WHOT", "updateTime": "2020-09-24T07:00:00+08:00"},
-                    {"contents": ["香港天文台在上午 11 時 15 分發出寒冷天氣警告。", "天文台預測本港今明兩日早晚天氣寒冷。"], "warningStatementCode": "WCOLD", "updateTime": "2020-09-24T11:15:00+08:00"},
-                    {"contents": ["天文台提醒農友及有關人士，明日清晨在新界北部可能出現地面霜。"], "warningStatementCode": "WFROST", "updateTime": "2020-09-24T11:15:00+08:00"},
-                    {"contents": ["天文台在上午 11 時 15 分發出紅色暴雨警告信號。"], "subtype": "WRAINR", "warningStatementCode": "WRAIN", "updateTime": "2020-09-24T11:15:00+08:00"},
-                    {"contents": ["香港天文台在 9 月 24 日 11:40 發出之新界北部水浸特別報告。"], "warningStatementCode": "WFNTSA", "updateTime": "2020-09-24T11:40:00+08:00"},
-                    {"contents": ["三號強風信號在上午 11 時 15 分發出。"], "subtype": "TC3", "warningStatementCode": "WTCSGNL", "updateTime": "2020-09-24T11:15:00+08:00"},
-                    {"contents": ["香港天文台宣布預計在今天（9 月 24 日）下午 4 時 07 分或以前發出八號熱帶氣旋警告信號，本港風勢將會加強。"], "warningStatementCode": "WTCPRE8", "updateTime": "2020-09-24T14:10:00+08:00"},
-                    {"contents": ["香港天文台在 2020 年 9 月 24 日上午 11 時 15 分發出海嘯警告。"], "warningStatementCode": "WTMW", "updateTime": "2020-09-24T11:15:00+08:00"},
-                    {"contents": ["現時之火災危險警告為紅色，表示火災危險性極高。"], "warningStatementCode": "WFIRE", "subtype": "WFIRER", "updateTime": "2020-09-24T11:15:00+08:00"}
-                ]
-            };    
-        }
+        // if (document.documentElement.lang == "en") {
+        //     data = {
+        //         "details": [
+        //             {"contents": ["Thunderstorm Warning issued at 11:40 a.m. on 24 Sep 2020 has been extended until 7:30 p.m. today.", "Thunderstorms are expected to occur over Hong Kong.", "Precautions:", "1. Stay indoors.", "2. Keep away from conductive objects, trees, or masts."], "warningStatementCode": "WTS", "updateTime": "2020-09-24T05:00:00+08:00"},
+        //             {"contents": ["The Strong Monsoon Signal was issued at 11:15 a.m."], "warningStatementCode": "WMSGNL", "updateTime": "2020-09-24T11:15:00+08:00"},
+        //             {"contents": ["Landslip Warning issued at 11:15 a.m."], "warningStatementCode": "WL", "updateTime": "2020-09-24T11:15:00+08:00"},
+        //             {"contents": ["The Very Hot Weather Warning has been issued at 07:00.", "The Hong Kong Observatory forecasts hot weather with light winds today.", "Precautions:", "1. Drink plenty of water and avoid overexertion.", "2. If feeling unwell, rest in a cool place.", "3. Ensure adequate indoor ventilation.", "4. Wear loose clothing, hats, and UV-blocking sunglasses.", "5. Use sunscreen SPF 15 or above and reapply frequently.", "6. Check on the elderly or persons with chronic illnesses."], "warningStatementCode": "WHOT", "updateTime": "2020-09-24T07:00:00+08:00"},
+        //             {"contents": ["The Cold Weather Warning has been issued at 11:15 a.m.", "Cold weather is expected in Hong Kong.", "Precautions:", "1. Wear warm clothing and ensure indoor ventilation.", "2. Wind chill may lead to hypothermia.", "3. Check on elderly or persons with chronic illnesses.", "4. Beware of icy conditions in Tai Mo Shan.", "5. Ensure heaters are safe and placed away from combustibles.", "6. Avoid lighting fires indoors.", "7. Ensure fresh air when using old gas water heaters."], "warningStatementCode": "WCOLD", "updateTime": "2020-09-24T11:15:00+08:00"}
+        //         ]
+        //     }
+        // } else {
+        //     data = {
+        //         "details": [
+        //             {"contents": ["雷暴警告", "天文台在 9 月 24 日上午 11 時 40 分發出之雷暴警告，有效時間延長至今日下午 7 時 30 分，預料香港有雷暴。", "雷暴發生時，請採取以下預防措施：", "1. 留在室內。在室外的人士應躲入建築物內。", "2. 切勿站立於高地或接近導電的物體、樹木或桅杆。"], "warningStatementCode": "WTS", "updateTime": "2020-09-24T05:00:00+08:00"},
+        //             {"contents": ["強烈季候風信號在 11 時 15 分發出。"], "warningStatementCode": "WMSGNL", "updateTime": "2020-09-24T11:15:00+08:00"},
+        //             {"contents": ["山泥傾瀉警告：\n\n 天文台在 11:15 發出山泥傾瀉警告。"], "warningStatementCode": "WL", "updateTime": "2020-09-24T11:15:00+08:00"},
+        //             {"contents": ["香港天文台在 07 時 00 分發出酷熱天氣警告。", "天文台預料今日本港天氣酷熱，加上風勢輕微，市民應提高警惕，以防中暑。", "在戶外工作或活動的人士，應多喝水和不要過度勞累。於感覺不適時，應盡快到陰涼的地方休息。"], "warningStatementCode": "WHOT", "updateTime": "2020-09-24T07:00:00+08:00"},
+        //             {"contents": ["香港天文台在上午 11 時 15 分發出寒冷天氣警告。", "天文台預測本港今明兩日早晚天氣寒冷。"], "warningStatementCode": "WCOLD", "updateTime": "2020-09-24T11:15:00+08:00"},
+        //             {"contents": ["天文台提醒農友及有關人士，明日清晨在新界北部可能出現地面霜。"], "warningStatementCode": "WFROST", "updateTime": "2020-09-24T11:15:00+08:00"},
+        //             {"contents": ["天文台在上午 11 時 15 分發出紅色暴雨警告信號。"], "subtype": "WRAINR", "warningStatementCode": "WRAIN", "updateTime": "2020-09-24T11:15:00+08:00"},
+        //             {"contents": ["香港天文台在 9 月 24 日 11:40 發出之新界北部水浸特別報告。"], "warningStatementCode": "WFNTSA", "updateTime": "2020-09-24T11:40:00+08:00"},
+        //             {"contents": ["三號強風信號在上午 11 時 15 分發出。"], "subtype": "TC3", "warningStatementCode": "WTCSGNL", "updateTime": "2020-09-24T11:15:00+08:00"},
+        //             {"contents": ["香港天文台宣布預計在今天（9 月 24 日）下午 4 時 07 分或以前發出八號熱帶氣旋警告信號，本港風勢將會加強。"], "warningStatementCode": "WTCPRE8", "updateTime": "2020-09-24T14:10:00+08:00"},
+        //             {"contents": ["香港天文台在 2020 年 9 月 24 日上午 11 時 15 分發出海嘯警告。"], "warningStatementCode": "WTMW", "updateTime": "2020-09-24T11:15:00+08:00"},
+        //             {"contents": ["現時之火災危險警告為紅色，表示火災危險性極高。"], "warningStatementCode": "WFIRE", "subtype": "WFIRER", "updateTime": "2020-09-24T11:15:00+08:00"}
+        //         ]
+        //     };    
+        // }
 
         const name = document.getElementById('warn_name');
         const statement = document.getElementById('warn_statement');
